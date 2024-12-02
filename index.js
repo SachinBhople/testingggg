@@ -14,7 +14,6 @@ app.use(cookieParser())
 
 app.use("/api", require("./routes/todo.routes"))
 app.use("/api/auth", require("./routes/auth.routes"))
-// app.use("/api/auth", require("./routes/auth.routes"))
 app.use("*", (req, res) => {
     res.status(404).json({ message: "Resource Not Found" })
 })
@@ -28,3 +27,6 @@ mongoose.connection.once("open", () => {
     app.listen(process.env.PORT, console.log("SERVER RUNING 🏃‍♂️"))
 })
 
+
+
+// Commit From Somesh
